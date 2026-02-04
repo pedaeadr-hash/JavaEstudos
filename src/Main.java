@@ -1,27 +1,26 @@
 public class Main {
     public static void main(String[] args) {
 
-        String classe = "Pessoa";
-        String nome = "Adrian Ariel Lopes Santos";
-        String sexualidade = "Masculino";
-        int idade = 15;
-        String localidade = "São Paulo";
-        double peso = 64;
-        double altura = 1.70; // exemplo
-        boolean empregadojava= false;
-        if (empregadojava==true){
+        String category = "People";
+        String name = "Adrian Ariel Lopes Santos";
+        String gender = "Male";
+        int age = 15;
+        String location = "São Paulo";
+        double weight = 64;
+        double height = 1.70; // example
+        boolean employedInJava = true;
+
+        if (employedInJava) {
 
             System.out.println(
-                    classe + " " + nome + " " + idade + " anos " + peso + " kg"
+                    category + " " + name + " " + age + " years " + weight + " kg"
             );
 
-            double imc = peso / (altura * altura);
-            System.out.println("IMC de aproximadamente: " + imc + " "+ empregadojava);
+            double bmi = weight / (height * height);
+            System.out.println("Approximate BMI: " + bmi + " " + employedInJava);
 
+        } else {
+            System.out.println("Denied");
         }
-        else {
-            System.out.println("Você nao trampa vaza fi");
-        }
-
     }
 }
