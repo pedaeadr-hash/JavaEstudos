@@ -1,26 +1,30 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        String category = "People";
-        String name = "Adrian Ariel Lopes Santos";
-        String gender = "Male";
-        int age = 15;
-        String location = "São Paulo";
-        double weight = 64;
-        double height = 1.70; // example
-        boolean employedInJava = true;
+        Scanner st = new Scanner(System.in);
 
-        if (employedInJava) {
+        System.out.println("HI WELCOME TO AZURE");
+        System.out.println("YOUR SOLUTIONS PROGRAM");
 
-            System.out.println(
-                    category + " " + name + " " + age + " years " + weight + " kg"
-            );
+        System.out.println("whats your name ?");
+        String name = st.nextLine();
 
-            double bmi = weight / (height * height);
-            System.out.println("Approximate BMI: " + bmi + " " + employedInJava);
+        System.out.println("OK " + name + " whats your age ?");
+        int age = st.nextInt();
+        st.nextLine();
 
+        System.out.println("OK you there is " + age + " age");
+
+        System.out.println("mandar para a lista digite yes or no :");
+        String afirma = st.nextLine();
+
+        if (afirma.equalsIgnoreCase("yes")) {
+            System.out.println("mandando informaçoes para a lista");
+            Lista.listap(name, age); // 👈 AQUI A MÁGICA
         } else {
-            System.out.println("Denied");
+            System.out.println("ok vc nao quer enviar");
         }
     }
 }
